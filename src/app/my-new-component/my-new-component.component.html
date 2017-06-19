@@ -1,0 +1,43 @@
+<p>
+  my-new-component works!
+</p>
+`this would help us to tranket a lot of tags and string
+
+<h2> this is h2 tage</h2>
+<h1> this is h1 tag</h1>
+and so on
+<p> do I get</p>
+<ul>
+	<li *ngFor="let arr of myarray" >{{ arr }}</li>
+</ul>
+
+<div *ngIf="mybool; then templ1 else templ2"></div>
+
+<ng-template #templ1> true</ng-template>
+<ng-template #templ2> false</ng-template>
+<!-- Property binding -->
+<img src ="{{angularLogo}}">
+<img [src] = "angularLogo" >
+<img bind-src = "angularLogo">
+
+<button [disabled]= "buttonStatus=='disabled'">My button</button>
+
+<!-- Event binding -->
+
+<button (mouseenter)="myEvent($event)"> My event button</button>
+<!-- css External binding-->
+<h2> This is for css external biniding</h2>
+<!--class binding for css-->
+<h1 [class]="titleclass"> This is for class biniding!</h1>
+<!--class binding of choice-->
+
+<h1 [style.color]="titleStyle ? 'green' : 'red'"> Color of choice</h1>
+
+<!-- To controll multiple style using single object-->
+
+<h1 [ngStyle]='titleStyles'> Multiple Style</h1>
+<!-- Services -->
+<p>{{someProperty}}</p>
+
+<!-- Animation-->
+<p id="animat" [@myAwesomeAnimation]='state' (click)="animateMe()">I will animate</p>
